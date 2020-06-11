@@ -9,7 +9,8 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/beige.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/theme/moon.css">
 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/isbl-editor-light.css">
@@ -26,22 +27,130 @@
 <body>
 <div class="reveal">
   <div class="slides">
-    <section>
+    <section data-background="./assets/back.svg"  data-background-size="contain">
       <h2>WRM Temporal Network</h2>
-      <small>Authors...</small>
+      <small>Authors: Kemal Erdem, Dominika Kunc, Piotr Mazurek, Norbert Ropiak</small>
     </section>
-    <section>
-      <h2>Slide 1</h2>
+    <section data-background="./assets/slide2.svg"  data-background-size="cover">
+      <h2>Background</h2>
       <p>
-        ABC
+        <span>Model movement within the city</span><br/>
+        <span>Bike usage patterns</span><br/>
+      </p>
+    </section>
+    <section data-background="./assets/slide3.svg"  data-background-size="cover">
+      <h2>Data</h2>
+      <p>
+        <span>03.2019 - 12.2019</span><br/>
+        <span>Wrocław Open Data</span><img src="assets/logo.png" />
       </p>
     </section>
     <section>
+      <h2 style="display: flex; align-items: center; justify-content: center;"><span>Preprocessing</span> <img src="assets/031-tools.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <p>
+        <img src="assets/stations_table.png" />
+      </p>
+    </section>
+    <section>
+      <h2 style="display: flex; align-items: center; justify-content: center;"><span>Data representation</span> <img src="assets/personal.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <div style="display: inline-grid; grid-template-columns: 40% 60%">
+        <ul style="padding-right: 120px; word-break: keep-all; white-space: nowrap">
+          <li>Complete graph</li>
+          <li>Intervals - 15min</li>
+          <li>Nodes - stations</li>
+          <li>Edges - directed</li>
+          <li>Edge - weight</li>
+        </ul>
+        <img src="assets/map.gif" style="height: 220px" />
+      </div>
+    </section>
+    <section style="">
+      <h2 style="display: flex; align-items: center; justify-content: center;"><span>Metrics</span> <img src="assets/042-pin.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <div style="display: inline-grid; grid-template-columns: 50% 50%">
+        <ul style="padding-right: 120px; word-break: keep-all; white-space: nowrap">
+          <li>Degree</li>
+          <li>In degree</li>
+          <li>Out degree</li>
+          <li>PageRank</li>
+          <li>Current Bikes Usage</li>
+        </ul>
+        <img src="assets/wita_stwosza_metrics.png"/>
+      </div>
+    </section>
+    <section data-background="./assets/slide6.svg"  data-background-size="cover">
+      <h2 style="display: flex; justify-content: start; align-items: center"><span>Paths</span> <img src="assets/interconnected.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <p style="display: flex; flex-direction: column; justify-content: start; align-items: start">
+        <span>$204^2$ total paths</span>
+        <span>Dijkstra Algorithm</span>
+      </p>
+    </section>
+    <section data-background="./assets/full-paths.png"  data-background-size="cover">
+      <div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+        <h2>Display Graph</h2>
+        <p>Optimization based on travel time between nodes</p>
+      </div>
+    </section>
+    <section data-background-iframe="https://burnpiro.github.io/wod-bike-dataset-generator/" data-background-interactive>
+    </section>
+    <section>
+      <h2 style="display: flex; justify-content: center; align-items: center"><span>Interesting Findings</span> <img src="assets/glasses_nose.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <div style="display: inline-grid; grid-template-columns: 60% 60%;
+    margin-left: -10%;
+    margin-right: 10%;">
+        <div>
+          <span>Teaching hours</span>
+          <img src="assets/findings-pwr.png" style="height: 300px"/>
+        </div>
+        <div>
+          <span>Work travel</span>
+          <img src="assets/lesnica.png" style="height: 300px"/>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 style="display: flex; justify-content: center; align-items: center"><span>Interesting Findings - Psie Pole</span> <img src="assets/glasses_nose.svg" style="height: 100px; filter: invert(1); margin-left: 12px" /></h2>
+      <div style="display: inline-grid; grid-template-columns: 60% 60%;
+    margin-left: -10%;
+    margin-right: 10%;">
+        <div>
+          <img src="assets/lew.png" style="height: 400px"/>
+        </div>
+        <div>
+          <img src="assets/psie_pole_8_04_16_30.PNG" style="height: 400px"/>
+        </div>
+      </div>
+    </section>
+    <section data-background="./assets/slide9.svg"  data-background-size="cover">
+      <h2 style="display: flex; justify-content: start; align-items: center"><span>How useful was <br/> Network Science</span></h2>
+      <p style="display: flex; flex-direction: column; justify-content: start; align-items: start">
+        <ul style="display: flex; flex-direction: column; justify-content: start; align-items: start">
+          <li>Knowledge about Graph Theory</li>
+          <li>Deep understanding of measures</li>
+          <li>Paths finding</li>
+          <li>Temporal Networks</li>
+        </ul>
+      </p>
+    </section>
+    <section data-background="./assets/slide10.svg"  data-background-size="cover">
+      <div style="display: flex; flex-direction: column; justify-content: end; align-items: flex-end; padding-left: 20px;">
+        <h2 style="display: flex; justify-content: start; align-items: center"><span>Further development</span></h2>
+        <ul style="text-align: end; list-style: none; font-size: 36px">
+          <li>2020 year data &#8226;</li>
+          <li>Expansion to other cities &#8226;</li>
+          <li>Realtime capacity data &#8226;</li>
+        </ul>
+      </div>
+    </section>
+    <section data-background="./assets/slide-final.svg"  data-background-size="cover">
       <h2>Thanks</h2>
       <blockquote>"There's no such thing as a stupid question!"</blockquote>
       <p>
-        <small>Authors</small><br/>
-        <small><a href="">Links</a></small><br/>
+        <small>Authors: Kemal Erdem, Dominika Kunc, Piotr Mazurek, Norbert Ropiak</small><br/>
+        <small><a href="https://burnpiro.github.io/wod-bike-dataset-generator/">https://burnpiro.github.io/wod-bike-dataset-generator/</a></small><br/>
+        <small style="font-size: 12px; line-height: 12px">
+          <span>Acknowledgements:</span>
+          <span>Icons designed by Creative_hat / Freepik</span>
+        </small><br/>
       </p>
     </section>
   </div>
@@ -57,7 +166,7 @@
     hash: true,
     controls: true,
     progress: false,
-    slideNumber: false,
+    slideNumber: 'c/t',
     overview: true,
     center: true,
     navigationMode: 'default',
